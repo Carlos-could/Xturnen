@@ -34,7 +34,7 @@
         </div>
 
         <div class="ten columns">
-          <nav id="enlaces"  class="enlaces uno u-pull-right">
+          <nav id="enlaces"  class="enlaces uno">
             <a href="#" class="navbar-link">Home</a>
             <a href="#" class="navbar-link">Sport</a>
             <a href="#" class="navbar-link">Kultur</a>
@@ -59,8 +59,27 @@
     </div>
   </header>
 
+  <script >
+  let boton = document.getElementById("hamburger");
+  let enlaces = document.getElementById("enlaces");
+  let contador = 0;
+
+  function ver() {
+    if(window.innerWidth >= 768){
+      enlaces.classList.toggle("dos");
+    } else{
+      console.log('else')
+    }
+  }
+
+  window.addEventListener("resize", ver);
+
+  boton.addEventListener("click",function(){
+          enlaces.classList.toggle("dos");
+  })
 
 
-  <script src="main.js"></script>
+
+  </script>
 </body>
 </html>

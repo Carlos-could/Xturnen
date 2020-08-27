@@ -15,9 +15,10 @@ boton.addEventListener("click",function(){
 
 window.addEventListener("resize", function(){
     if(screen.width > 767){
-        contador=0;
-        enlaces.classList.remove('dos');
-        enlaces.className = ('enlaces uno');
+      // alert();
+        // contador=0;
+        enlaces.classList.remove('logo');
+        enlaces.className = ('uno');
     }
 })
 
