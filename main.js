@@ -2,32 +2,16 @@ let boton = document.getElementById("hamburger");
 let enlaces = document.getElementById("enlaces");
 let contador = 0;
 
+function ver() {
+  if(window.innerWidth >= 768){
+    enlaces.classList.remove( "uno");
+  }else{
+    enlaces.classList.add( "uno");
+  }
+}
+
+window.addEventListener("resize", ver);
+
 boton.addEventListener("click",function(){
-    if(contador == 0){
-        enlaces.className = ('enlaces dos');
-        contador=1;
-    }else{
-        enlaces.classList.remove('dos');
-        enlaces.className = ('enlaces uno');
-        contador = 0;
-    }
+        enlaces.classList.toggle("dos");
 })
-
-window.addEventListener("resize", function(){
-    if(screen.width > 767){
-      // alert();
-        // contador=0;
-        enlaces.classList.remove('logo');
-        enlaces.className = ('uno');
-    }
-})
-
-window.addEventListener('click',function(e){
-    console.log(e.target);
-    if(cerrado==false){
-        let span = document.querySelector('.links-header');
-        if(e.target == span){
-            contador=0;
-        }
-    }
-});

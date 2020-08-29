@@ -1,85 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Turner</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <head>
+    <meta charset="utf-8">
+    <title>Turner</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
 
-<body>
-  <header class="header">
-    <div  class="container">
+  <body>
+    <nav class="nav container">
 
-      <div class="row group-nav p-11 p-61">
+          <div class="logo">
+              <img src="img\logo.png">
+          </div>
 
-        <div class=" two colomns logo">
-            <img src="img\logo.png">
-        </div>
+          <div id="hamburger" class="hamburger">
+            <span>&#9776;</span>
+          </div>
 
-        <div id="hamburger" class="hamburger">
-          <span>&#9776;</span>
-        </div>
+          <div id="enlaces"  class="enlaces uno">
+              <a href="#" class="navbar-link">Home</a>
+              <a href="#" class="navbar-link">Sport</a>
+              <a href="#" class="navbar-link">Kultur</a>
+              <a href="#" class="navbar-link">Verein</a>
+              <a href="#" class="navbar-link">News</a>
+          </div>
 
-        <div class="ten columns">
-          <nav id="enlaces"  class="enlaces uno">
-            <a href="#" class="navbar-link">Home</a>
-            <a href="#" class="navbar-link">Sport</a>
-            <a href="#" class="navbar-link">Kultur</a>
-            <a href="#" class="navbar-link">Verein</a>
-            <a href="#" class="navbar-link">News</a>
-          </nav>
-        </div>
-      </div>
+    </nav> <!-- NAV -->
 
-      <div class="row group-sport">
+    <header class="header hero container">
 
-        <div class="four columns content-text ">
-          <h2>Sport, Kultur und Freizeitgestaltung</h2>
+
+        <div class=" hero-txt ">
+          <h3>Sport, Kultur und Freizeitgestaltung</h3>
           <p>Auf diesen Seiten findest du alle Informationen um bei uns mitzumachen, oder zuzuschauen. Schau Dich einfach einmal um.</p>
         </div>
-        <div class="eight columns content-collage">
 
+        <div class=" hero-img">
         </div>
 
-      </div>
-
-    </div>
-  </header>
-
-  <script >
-  let boton = document.getElementById("hamburger");
-  let enlaces = document.getElementById("enlaces");
-  let contador = 0;
-
-  function ver() {
-    if(window.innerWidth >= 768){
-      enlaces.classList.toggle("dos");
-    } else{
-      console.log('else')
-    }
-  }
-
-  window.addEventListener("resize", ver);
-
-  boton.addEventListener("click",function(){
-          enlaces.classList.toggle("dos");
-  })
+    </header>
 
 
-
-  </script>
-</body>
+    <script src="main.js"> </script>
+  </body>
 </html>
